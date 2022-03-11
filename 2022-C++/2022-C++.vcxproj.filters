@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C기본\03swtich.c">
+    <ClCompile Include="05논리연산자.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
