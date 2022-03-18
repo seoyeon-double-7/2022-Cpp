@@ -14,7 +14,7 @@ int main(void)
 	// ptr1가 num1를 가리킴
 	ptr1 = ptr2;
 
-	printf("%d %d %d", ptr1, ptr2, ptr3s)
+	printf("%d %d %d", ptr1, ptr2, ptr3);
 
 	return 0;
 }
