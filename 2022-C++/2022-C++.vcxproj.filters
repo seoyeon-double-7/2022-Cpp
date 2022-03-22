@@ -15,8 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C기본\09 포인터 연산 - 복사본.c">
+    <None Include="17 증감연산자.c">
       <Filter>소스 파일</Filter>
-    </ClCompile>
+    </None>
   </ItemGroup>
 </Project>
