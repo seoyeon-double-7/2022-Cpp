@@ -2,8 +2,8 @@
 using namespace std;
 
 void jungjuk(void) {
-	int a = 0;
-	cout << "지역변수 a는 " << a << endl;
+	static int a = 0;	//한번 할당되면 쭉 남는다.
+	cout << "정적 지역변수 a는 " << a << endl;
 	a++;
 }
 
