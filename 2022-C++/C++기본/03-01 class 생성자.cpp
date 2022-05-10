@@ -7,13 +7,13 @@ class Student
 {
 private:
 	int nHakbun;
-	string sName;
+	const char* sName;
 
 	// 생성자 : 객체가 생성되면 자동으로 호출되는 함수
 	// 반환형을 갖고 있지 않는다.
 public:
 	Student();
-	Student(int Hakbun, string Name);
+	Student(int , const char*);
 	void show();
 };
 
@@ -24,11 +24,10 @@ Student::Student()
 	cout << "학번이 등록되었습니다 히히힛 (*°▽ °*)" << endl;
 }
 
-Student::Student(int Hakbun, string Name)
+Student::Student(int nHakbun, const char* sName)
 {
-	nHakbun = Hakbun;
-	sName = Name;
-	cout << "학번이 등록되었습니다 히히힛 (*°▽ °*)" << endl;
+	this->nHakbun = nHakbun;
+	this->sName = sName;
 }
 void Student::show()
 {
@@ -37,11 +36,10 @@ void Student::show()
 }
 
 int main(void) {
-	Student stu1 = Student();
-	stu1.show();
-
-	Student stu2 = Student(1111, "BSY");
-	stu2.show();
+	Student student1;
+	Student student2(1111, "BSY");
+	student1.show();
+	student2.show();
 
 	return 0;
 }
