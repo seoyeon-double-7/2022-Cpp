@@ -22,16 +22,17 @@ Student::Student()
 	cout << "학번이 등록되었습니다 히히힛 (*°▽ °*)" << endl;
 }
 
-Student::Student(int nHakbun, string sName)
+Student::Student(int Hakbun, string Name)
+	:nHakbun(Hakbun), sName(Name)
 {
-	this->nHakbun = nHakbun;
-	this->sName = sName;
+	//this->nHakbun = nHakbun;
+	//this->sName = sName;
 	cout << "학번이 등록되었습니다 히히힛 (*°▽ °*)" << endl;
 }
 void Student::show()
 {
-	cout << "학번은 " << nHakbun << "입니다." << endl;
-	cout << "이름은 " << sName << "입니다." << endl << endl;
+	cout << "학번은 " << nHakbun << "입니다.";
+	cout << "이름은 " << sName << "입니다." << endl;
 }
 
 int main(void) {
