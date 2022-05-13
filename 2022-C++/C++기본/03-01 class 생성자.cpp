@@ -42,9 +42,11 @@ int main(void) {
 	//Student stu2 = Student(1111, "BSY");
 	//stu2.show();
 
-	int* ptr = new int;
-	*ptr = 20;
-	cout << *ptr << endl;
+	int* ptr2 = new int[4];
+	for (int i = 0; i < 4; i++) {
+		ptr2[i] = 10 + i;
+		cout << ptr2[i] << " ";
+	}
 
 	return 0;
 }
