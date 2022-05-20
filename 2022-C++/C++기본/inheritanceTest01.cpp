@@ -5,6 +5,7 @@ using namespace std;
 class Person {
 private:
 	string sName;
+protected:
 	int nAge;
 public:
 	Person();
@@ -13,9 +14,9 @@ public:
 };
 
 
-class Student :public Person {
-public:
+class Student :protected Person {
 	int nHakbun;
+public:
 	Student();
 	Student(string, int, int);
 	void study();
@@ -35,7 +36,9 @@ void Person::hi() {
 }
 
 void Student::study() {
-
+	hi();
+	cout << "학번 : " << nHakbun;
+	nAge = 100;
 }
 
 Student::Student() : Person() {
@@ -61,6 +64,9 @@ int main(void) {
 	for (int i = 0; i < 5; i++) {
 		p3[i].hi();
 	}
+
+	Student stu;
+	// stu.nAge = 100; nAge가 protected 이기 때문에 에러
 
 	delete p1, p2;
 	delete[]p3;
