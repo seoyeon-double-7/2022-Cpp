@@ -3,22 +3,38 @@ using namespace std;
 
 class Point 
 {
+public:
+	// 생성자
+	Point();
+	Point(int mX, int mY);
+	void print(void);
+
+	// 연산자 오버로딩
+	Point operator+(const Point& rhs);
+
 private:
 	int mX, mY;
-public:
-	Point(int mX, int mY);
-	void show();
 };
 
+Point::Point() {}
 Point::Point(int mX, int mY) :mX(mX), mY(mY) {}
 
-void Point::show() {
+void Point::print() {
 	cout << "(" << mX << ", " << mY << ")" << endl;
+}
+
+Point Point::operator+(const Point& rhs)
+{
+	Point point;
+	point.mX = mX + rhs.mX;  
+	point.mY = mY + rhs.mY;
+	return point;
 }
 
 int main(void) {
 	Point p1(1, 2);
-	p1.show();
-
+	Point p2(3, 4);
+	Point sum = p1 + p2;
+	sum.print();
 	return 0;
 }
