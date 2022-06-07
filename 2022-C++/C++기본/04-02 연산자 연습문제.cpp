@@ -1,20 +1,6 @@
-#include <iostream>
-using namespace std;
+#include "04-02.h"
 
-class Integer {
-public:
-	Integer();
-	Integer(int x);
-	void print(void);
-
-	Integer operator+(const Integer& rhs);
-private:
-	int val;
-};
-
-Integer::Integer(){
-	val = 0;
-}
+Integer::Integer(void){}
 Integer::Integer(int x) :val(x) { }
 
 void Integer::print() {
@@ -31,7 +17,7 @@ Integer Integer::operator+(const Integer& rhs)
 int main(void) {
 	Integer a = Integer(1);
 	Integer b = Integer(2);
-	Integer c = a + b;
+	Integer c = a + b;	// c = a.operator+(b)
 	c.print();	//3ÀÌ Ãâ·Â
 
 	return 0;
